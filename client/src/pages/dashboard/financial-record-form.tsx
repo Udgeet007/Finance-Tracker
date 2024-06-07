@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUser } from "@clerk/clerk-react";
-import { useFinancialRecords } from "../../contexts/financial-record-context";
+import { useFinancialRecords } from "../../contexts/finacial-record-context";
+// import { useFinancialRecords } from "../../contexts/financial-record-context";
 
 export const FinancialRecordForm = () => {
   const [description, setDescription] = useState<string>("");
@@ -8,6 +9,7 @@ export const FinancialRecordForm = () => {
   const [category, setCategory] = useState<string>("");
   const [paymentMethod, setPaymentMethod] = useState<string>("");
   const { addRecord } = useFinancialRecords();
+
 
   const { user } = useUser();
 
